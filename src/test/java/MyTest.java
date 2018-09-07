@@ -1,4 +1,3 @@
-
 import io.qameta.allure.Step;
 import listener.AllureListener;
 import org.testng.annotations.Listeners;
@@ -19,6 +18,11 @@ public class MyTest {
     void myTest2() {
         step1();
         step2();
+        failStep3();
+    }
+
+    @Step
+    private void failStep3() {
         assert false;
     }
 
